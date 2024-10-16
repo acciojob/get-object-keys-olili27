@@ -1,10 +1,8 @@
 //your JS code here. If required.
 let obj = {
-  name: "student",
-  getKeys() {
-    let keys = Object.keys(obj);
-    return keys.filter((key) => key !== this.getKeys.name);
-  },
+  name: "student"
 };
 
-let student = Object.create(obj)
+let student.__proto__.getKeys = function() {
+	return Object.keys(this);
+}
