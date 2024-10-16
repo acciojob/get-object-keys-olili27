@@ -1,8 +1,8 @@
 //your JS code here. If required.
-let obj = {
+let student = {
   name: "student"
 };
 
-let student.__proto__.getKeys = function() {
+student.__proto__.getKeys = function() {
 	return Object.keys(this);
 }
